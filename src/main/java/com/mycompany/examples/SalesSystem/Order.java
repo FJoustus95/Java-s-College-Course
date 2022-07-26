@@ -6,17 +6,21 @@ import java.util.*;
 
 public class Order extends Product{
     
-            Scanner read = new Scanner(System.in);
+       Scanner read = new Scanner(System.in);
         
     
     int size;
+    String things;
     Product person1 [] = new Product[size];
     int total = 0;
     int idOrder;
     static int ordenCount;
     static int maxProduct = 10;
     
-    public Order (){
+    public Order (String name, double price){
+        super (name, price);
+         
+        
         
     }
     public void addProduct(Product product){
@@ -25,7 +29,8 @@ public class Order extends Product{
         System.out.println("Welcome to the grocery store");
         System.out.println();
         
-        System.out.println("Choose how many products would you like to buy");
+        System.out.println("Choose how many products would you like to buy???");
+        System.out.println("with 10th products are the max!!!!!!");
         
         size = read.nextInt();
         
@@ -37,7 +42,10 @@ public class Order extends Product{
         
         for (int i = 0; i <= size; i++) {
          
-           person1[i] = new Product (read.nextLine(),read.nextDouble());
+          person1[i] = new Product(name,price);
+          
+        
+           
            
               
                   
@@ -47,7 +55,7 @@ public class Order extends Product{
            
          else 
                    
-        System.out.println("The wrote mounth wasn´t correct");
+        System.out.println("The wrote amount weren´t correct");
         System.exit(0);          
         }
     

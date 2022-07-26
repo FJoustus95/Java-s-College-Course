@@ -6,55 +6,84 @@ import java.util.*;
 
 
 public class GrocesySystem {
-    public static void main(String[] args) {
-     
-       Scanner read = new Scanner(System.in);
-       int choice;
+    
+    Scanner read = new Scanner(System.in);
+       
       
-        
-       do{
+       boolean leave = false;
+                  
+       public void principalMenu(){
+       
+       leave = false;
+       int option;
+       
+       
+       while (!leave) {
            System.out.print("----------------------------------\n");
            System.out.println(" Sales System of a grocery store");   
            System.out.print("----------------------------------");
            
            System.out.println();
-           
-           System.out.println("What do you want to do???");
-           
-           System.out.println();
-           
+                
+          
            System.out.println("1) Add a Product");
            System.out.println("2) Calcule total");
            System.out.println("3) Show Order");
            System.out.println("4) System EXIT");
            
-           choice = read.nextInt();
-             
-       } while (choice < 1 || choice > 4 );
+           try{
+               
+               System.out.println(); 
+               System.out.println("what do you want to do???");
+               option = read.nextInt();
+               
+               System.out.println();
+               
+               switch(option) {
+                   
+                   case 1:
+                      Order order1 = new Order("", 0 );
+                      order1.addProduct(order1); 
+                      break;
+                      
+                   case 2:
+                       
+                       break;
+                       
+                   case 3:
+                       
+                       break;
+                       
+                   case 4:
+                       leave = true;
+                       System.out.println("you leave it");
+                       
+                       break;
+                       
+                   default:
+                       System.out.println("the options are between 1 to 4!!!");
+                       break;
+                       
+               }
+               //exception funtion of the menu
+           
+           
+           } catch (InputMismatchException e){
+               System.out.println("you can only type numbers!!!!");
+               read.nextInt();
+               
+           }
+           
+         }
        
-         System.out.println("\n");
-        
-            switch(choice) {
-                
-                case 1:
-                   Order order1 = new Order();
-                    order1.addProduct(order1);
-                    break;
-                    
-                case 2:
-                    
-                    break;
-                
-                case 3:
-                    
-                    break;
-                    
-                default:
-                    System.out.println("Thanks for has used the grocery system!");
-                    System.exit(0);
-                         
-            }
-       
-        
-    }
-}
+       }
+    public static void main(String[] args) {
+     
+       GrocesySystem grosery1 = new GrocesySystem();
+       grosery1.principalMenu();
+               
+           }
+           
+         }  
+          
+    

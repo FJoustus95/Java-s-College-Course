@@ -7,7 +7,7 @@ import java.util.Date;
 public class Product {
 
     
-    private Scanner read = new Scanner(System.in);
+    Scanner read = new Scanner(System.in);
     
     public String name;
     public int idProduct;
@@ -15,6 +15,7 @@ public class Product {
     public static int productCount;
     
     Product(){
+        
         
     }
     Product(String name, double price){
@@ -36,13 +37,8 @@ public class Product {
             
     }
 
-    public Scanner getRead() {
-        return read;
-    }
-
-    public void setRead(Scanner read) {
-        this.read = read;
-    }
+    
+  
 
     public int getIdProduct() {
         return idProduct;
