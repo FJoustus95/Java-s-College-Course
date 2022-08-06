@@ -19,8 +19,9 @@ public class Product {
         
     }
     Product(String name, double price){
-        this.name = read.nextLine();
-        this.price = read.nextDouble();
+        System.out.println("Ingrese el nombre y precio del producto");
+        this.name = name;
+        this.price = price;
         idProduct = Product.productCount++;
         this.CurrentDate();
         
@@ -29,11 +30,11 @@ public class Product {
 
     
     
-    public String CurrentDate(){
+    public void CurrentDate(){
         Date date = new Date();
         System.out.println(date);
         
-        return null;
+        
             
     }
 
@@ -78,8 +79,7 @@ public class Product {
         
         sb.append(", idProduct=").append(idProduct);
         sb.append(", name=").append(name);
-        sb.append(", price=").append(price);
-        sb.append(", toda´s date= ").append(this.CurrentDate()); 
+        sb.append(", price=").append(price); 
         sb.append('}');
         return sb.toString();
     }
