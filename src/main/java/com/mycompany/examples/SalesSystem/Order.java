@@ -1,7 +1,13 @@
 
 package main.java.com.mycompany.examples.SalesSystem;
 import main.java.com.mycompany.examples.SalesSystem.Product;
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Date;
+
+
+
 
 
 public class Order extends Product{
