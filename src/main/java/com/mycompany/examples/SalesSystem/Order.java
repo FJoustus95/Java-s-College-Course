@@ -12,10 +12,8 @@ import java.util.Date;
 
 public class Order extends Product{
     
-      Date date;
         
-    
-     int size = 10;
+    Date date = new Date();
     Product person1[];
     protected double total = 0;
     int idOrder;
@@ -24,8 +22,7 @@ public class Order extends Product{
     
     public Order (String name, double price){
         super (name, price);
-        person1 = new Product[size];
-        date = new Date();
+        
                 
         
     }
@@ -38,7 +35,8 @@ public class Order extends Product{
         System.out.println("Choose how many products would you like to buy???");
         System.out.println("with 10th products are the max!!!!!!");
         
-        
+        int size = read.nextInt();
+        person1 = new Product[size];
         
         
          if (size <= maxProduct) {
@@ -47,32 +45,33 @@ public class Order extends Product{
         
         System.out.println();
         
-        for (int i = 0; i < person1.length; i++) {
+        for (int i = 0; i < size; i++) {
          
-            System.out.println(person1.length);
+            System.out.println(size);
             
             
-            System.out.println("Type the products´ name " + (i));
+            System.out.println("Type the products´ name " + (i+1));
             String name = new Scanner(System.in).nextLine();
             
             
-            System.out.println("Type the products´ price " + (i));
+            System.out.println("Type the products´ price " + (i+1));
             double price = new Scanner(System.in).nextDouble();
         
-          person1[i] = new Product(name,price);
+            person1[i] = new Product(name,price);
           
+               
+                
+                
           
-          
-        
-           // se mira? 
-           // va mira el clavo aqui son 2 cosas
-           // ahorita lo ejecuto y te muestro
-           
-           
-              
                   
             }
-            calculeTotal();
+                // Trying to use a arraylist method to convert the a dynamic variable(int size) 
+                
+                System.out.println(Arrays.toString(person1));
+                //ArrayList<Product> mylist =  new ArrayList <Product>(Arrays.asList(person1));
+                
+        
+            //calculeTotal();
             
              System.out.println("\n");
              
@@ -80,11 +79,22 @@ public class Order extends Product{
              
           } 
            
-         else 
+         else {
                    
         System.out.println("The wrote amount weren´t correct");
-        System.exit(0);          
+        read.nextInt();
+         }
+        
         }
+
+    public Product[] getPerson1() {
+        return person1;
+    }
+
+    public void setPerson1(Product[] person1) {
+        this.person1 = person1;
+    }
+    
 
     public double getTotal() {
         return total;
@@ -95,13 +105,14 @@ public class Order extends Product{
     }
 
     
-    public void calculeTotal(){
+   public void calculeTotal(){
         double total = 0.0;
         
         for (int i  = 0; i < person1.length; i++) {
             total+= person1[i].getPrice();
             
            System.out.println(person1[i].toString());
+           
            
            
         }
@@ -122,9 +133,11 @@ public class Order extends Product{
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(super.toString());
-        sb.append("total= ").append(total);
-        sb.append("date= ").append(date);
+        sb.append(" idProduct = ").append(super.idProduct);
+        sb.append(" name = ").append(super.name);
+        sb.append(" price = ").append(super.price); 
+        sb.append("total = ").append(total);
+        sb.append("date = ").append(date);
         sb.append('}');
         return sb.toString();
     }

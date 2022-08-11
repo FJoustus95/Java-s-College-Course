@@ -2,6 +2,7 @@
 package main.java.com.mycompany.examples.SalesSystem.TestSales;
 import main.java.com.mycompany.examples.SalesSystem.*;
 import java.util.*;
+import javax.swing.JOptionPane;
 
 
 
@@ -10,13 +11,14 @@ public class GrocesySystem {
     Scanner read = new Scanner(System.in);
        
       
-       boolean leave = false;
+       
                   
        public void principalMenu(){
        
-       leave = false;
+       boolean leave = false;
        int option;
        
+       Order order1 = new Order("", 0 );
        
        while (!leave) {
            System.out.print("----------------------------------\n");
@@ -42,9 +44,9 @@ public class GrocesySystem {
                switch(option) {
                    
                    case 1:
-                      Order order1 = new Order("", 0 );
+                     
                       order1.addProduct(order1); 
-                        
+                      
                       break;
                       
                    case 2:
@@ -53,11 +55,29 @@ public class GrocesySystem {
                        
                    case 3:
                        
+                       
+                           
+                       for (int i = 0; i < order1.getPerson1().length; i++) {
+                           if(order1.getPerson1()[i] != null){
+                       
+                           
+                               System.out.println(order1.getPerson1()[i].toString());
+                           
+                       }
+                               
+                              
+                               
+                           }
+                     
+                       
+                       
                        break;
                        
                    case 4:
                        leave = true;
-                       System.out.println("you leave it");
+                       System.out.println("you left");
+                       JOptionPane.showMessageDialog(null, "Thank you so much for used the grocery System", "Grocery",1);
+                       
                        
                        break;
                        
@@ -71,11 +91,13 @@ public class GrocesySystem {
            
            } catch (InputMismatchException e){
                System.out.println("you can only type numbers!!!!");
-               read.nextInt();
+               leave = !leave;
                
            }
            
          }
+       leave = !leave;
+       
        
        }
     public static void main(String[] args) {

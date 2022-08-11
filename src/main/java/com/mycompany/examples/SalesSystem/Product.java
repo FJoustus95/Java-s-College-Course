@@ -19,11 +19,10 @@ public class Product {
         
     }
     Product(String name, double price){
-        System.out.println("Ingrese el nombre y precio del producto");
         this.name = name;
         this.price = price;
         idProduct = Product.productCount++;
-        this.CurrentDate();
+        
         
         
     }
@@ -75,7 +74,6 @@ public class Product {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        
         
         sb.append(", idProduct=").append(idProduct);
         sb.append(", name=").append(name);
