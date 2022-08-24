@@ -9,19 +9,21 @@ public class Product {
     
     Scanner read = new Scanner(System.in);
     
-    public String name;
-    public int idProduct;
-    public double price;
-    public static int productCount;
+    protected String name;
+    protected final int idProduct;
+    protected double price;
+    protected static int productCount;
     
     Product(){
+        this.idProduct = Product.productCount++;
         
         
     }
     Product(String name, double price){
+        this();
         this.name = name;
         this.price = price;
-        idProduct = Product.productCount++;
+        
         
         
         
@@ -44,9 +46,6 @@ public class Product {
         return idProduct;
     }
 
-    public void setIdProduct(int idProduct) {
-        this.idProduct = idProduct;
-    }
 
     public String getName() {
         return name;

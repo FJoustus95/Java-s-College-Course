@@ -50,6 +50,8 @@ public class GrocesySystem {
                       break;
                       
                    case 2:
+                       order1.calculeTotal();
+                       
                        
                        break;
                        

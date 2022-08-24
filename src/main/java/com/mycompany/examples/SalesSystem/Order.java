@@ -67,7 +67,7 @@ public class Order extends Product{
             }
                 // Trying to use a arraylist method to convert the a dynamic variable(int size) 
                 
-                System.out.println(Arrays.toString(person1));
+                //System.out.println(Arrays.toString(person1));
                 //ArrayList<Product> mylist =  new ArrayList <Product>(Arrays.asList(person1));
                 
         
