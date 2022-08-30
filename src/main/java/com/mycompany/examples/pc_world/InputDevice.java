@@ -9,7 +9,12 @@ public class InputDevice {
     protected String trademark;
     
     public InputDevice(String inputTYpe, String trademark){
+        System.out.println();
+        System.out.println("types the computer´s input device");
         this.inputType = new Scanner(System.in).nextLine();
+        
+        System.out.println("\n");
+        System.out.println("types de input device´s trademark");
         this.trademark = new Scanner(System.in).nextLine();
         
       }

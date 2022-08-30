@@ -15,7 +15,14 @@ public class Display {
  }
     public Display(String trademark, double size){
         this();
+        
+        System.out.println("types the computer´s display");
+        System.out.println();
         this.trademarkDisplay = new Scanner(System.in).nextLine();
+        
+        System.out.println("\n");
+        System.out.println("types the display´s size");
+        System.out.println();
         this.size = new Scanner(System.in).nextDouble();
         
         

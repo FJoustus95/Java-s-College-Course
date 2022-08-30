@@ -5,10 +5,10 @@ import main.java.com.mycompany.examples.pc_world.*;
 
 public class Keyboard extends InputDevice {
     
-    private int keyboard;
-    private int keyboardCount;
+    protected int keyboard;
+    protected int keyboardCount;
     
-    Keyboard(){
+     public Keyboard(){
         super(" ", " ");
     }
 
