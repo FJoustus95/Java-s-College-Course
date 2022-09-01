@@ -6,14 +6,17 @@ import main.java.com.mycompany.examples.pc_world.*;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.util.Date;
+
 
 
 public class OrderPC extends Computers{
     
     Scanner read = new Scanner(System.in);
+    Date date = new Date();
     
     protected int idOrder;
-    public Computers  computer1[];
+    private Computers  computer1[];
     protected static int ordersCount;
     protected int computersCount;
     protected int max_computers = 4;
@@ -22,6 +25,8 @@ public class OrderPC extends Computers{
     this.idOrder = OrderPC.ordersCount++;
           
     }
+    // with this method you can add a whole computer to our system
+    
     public void addComputer(Computers computers){
         
         System.out.println("Welcome to the computer store");
@@ -56,11 +61,11 @@ public class OrderPC extends Computers{
              
                 System.out.println();
                 
-                Keyboard keyboard = new Keyboard();
+                Keyboard keyboard = new Keyboard(" ", " ");
                 
                 System.out.println();
                 
-                Mouse mouse = new Mouse();
+                Mouse mouse = new Mouse(""," ");
                 
                 
                 computer1[i] = new Computers(name, display, keyboard, mouse);
@@ -69,8 +74,7 @@ public class OrderPC extends Computers{
          
             
             
-            
-            
+           
             
         }
         else {
@@ -81,5 +85,38 @@ public class OrderPC extends Computers{
         }
         
     }
+
+    public Computers[] getComputer1() {
+        return computer1;
+    }
+
+    public void setComputer1(Computers[] computer1) {
+        this.computer1 = computer1;
+    }
+    
+    public void showOrder(){
+        System.out.println(this.toString());
+        
+        JOptionPane.showMessageDialog(null, "Type anything to leave!!!","ORDER INFORMATION",1);
+        
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("OrderPC{");
+        sb.append("\nidOrder=").append(idOrder);
+        sb.append("\ncomputerID=").append(computerID);
+        sb.append("\nname=").append(super.name);
+        sb.append("\ndisplay=").append(super.display);
+        sb.append("\nkeyboard=").append(super.keyboard);
+        sb.append("\nmouse=").append(super.mouse);
+        sb.append("\ndate=").append(date); 
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+    
     
 }

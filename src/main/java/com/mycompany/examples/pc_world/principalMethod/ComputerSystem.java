@@ -41,7 +41,12 @@ public class ComputerSystem {
                         break;
                         
                     case 2:
-                        
+                        for (int i = 0; i < order1.getComputer1().length; i++) {
+                             if (order1.getComputer1()[i] != null){
+                                 
+                                 System.out.println(order1.getComputer1()[i].toString());  
+                             }
+                        }
                         break;
                         
                     case 3:

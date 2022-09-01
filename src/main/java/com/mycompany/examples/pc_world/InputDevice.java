@@ -39,9 +39,8 @@ public class InputDevice {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("InputDevice{");
-        sb.append("inputType=").append(inputType);
-        sb.append(", trademark=").append(trademark);
-        sb.append('}');
+        sb.append("\ninputType =").append(inputType);
+        sb.append("\ntrademark =").append(trademark);
         return sb.toString();
     }
     

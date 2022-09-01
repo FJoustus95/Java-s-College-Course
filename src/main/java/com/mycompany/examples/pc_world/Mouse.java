@@ -5,20 +5,24 @@ import main.java.com.mycompany.examples.pc_world.*;
 
 public class Mouse extends InputDevice {
     
-    private int mouseID;
-    private int mouseCount;
+    private  int mouseID;
+    private  static int mouseCount;
     
-       public Mouse(){
-        super("", "");
+       
            
+       public Mouse(String inputType, String trademark){
+        super("", "");
+        this.mouseID = Mouse.mouseCount++;
+        
+        
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Mouse{");
-        sb.append("mouseID=").append(mouseID);
-        sb.append(", mouseCount=").append(mouseCount);
+        sb.append("\nMouse{");
+        sb.append("\nmouseID =").append(this.mouseID);
+        sb.append("\n"+super.toString());
         sb.append('}');
         return sb.toString();
     }

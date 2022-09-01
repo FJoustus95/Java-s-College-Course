@@ -6,18 +6,22 @@ import java.util.Scanner;
 
 
 public class Computers {
-    protected int computerID;
+   
+    
+    protected final int computerID;
     protected String name;
     protected Display display;
     protected Keyboard keyboard;
     protected Mouse mouse;
+    protected static int computerCount;
     
     public Computers(){
-    
+        this.computerID = Computers.computerCount++;
     
   
     }
     public Computers(String name, Display display, Keyboard keyboard, Mouse mouse ){
+        this();
         this.name = name;
         this.display = display;
         this.keyboard = keyboard;
@@ -29,12 +33,12 @@ public class Computers {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Computers{");
-        sb.append("computerID=").append(computerID);
-        sb.append(", name=").append(name);
-        sb.append(", display=").append(display);
-        sb.append(", keyboard=").append(keyboard);
-        sb.append(", mouse=").append(mouse);
+        sb.append("\nComputers{");
+        sb.append("\ncomputerID=").append(computerID);
+        sb.append("\nname=").append(name);
+        sb.append("\ndisplay=").append(display);
+        sb.append("\nkeyboard=").append(keyboard);
+        sb.append("\nmouse=").append(mouse);
         sb.append('}');
         return sb.toString();
     }

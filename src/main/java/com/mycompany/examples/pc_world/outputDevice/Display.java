@@ -63,12 +63,9 @@ public class Display {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Display{");
-        sb.append("displayID=").append(displayID);
-        sb.append(", trademarkDisplay=").append(trademarkDisplay);
-        sb.append(", size=").append(size);
-        sb.append(", displayCount=").append(displayCount);
-        sb.append('}');
+        sb.append("\nDisplay{");
+        sb.append("\ntrademarkDisplay=").append(trademarkDisplay);
+        sb.append("\nsize=").append(size);
         return sb.toString();
     }
  
