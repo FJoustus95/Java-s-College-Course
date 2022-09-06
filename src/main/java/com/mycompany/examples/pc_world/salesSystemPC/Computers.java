@@ -34,11 +34,11 @@ public class Computers {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("\nComputers{");
-        sb.append("\ncomputerID=").append(computerID);
-        sb.append("\nname=").append(name);
-        sb.append("\ndisplay=").append(display);
-        sb.append("\nkeyboard=").append(keyboard);
-        sb.append("\nmouse=").append(mouse);
+        sb.append("\ncomputerID =").append(computerID);
+        sb.append("\nname =").append(name);
+        sb.append("\ndisplay =").append(display);
+        sb.append("\nkeyboard =").append(keyboard);
+        sb.append("\nmouse =").append(mouse);
         sb.append('}');
         return sb.toString();
     }

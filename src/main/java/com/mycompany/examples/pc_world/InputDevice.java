@@ -11,6 +11,7 @@ public class InputDevice {
     public InputDevice(String inputTYpe, String trademark){
         System.out.println();
         System.out.println("types the computer´s input device");
+        System.out.println("the first input device is the keyboard");
         this.inputType = new Scanner(System.in).nextLine();
         
         System.out.println("\n");
