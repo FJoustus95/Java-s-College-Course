@@ -1,6 +1,13 @@
 package main.java.com.mycompany.examples.enum1;
 
-public class Days {
+public enum Days {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THRUSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY,
     
 }
  
